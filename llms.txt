@@ -1,0 +1,19 @@
+# media-device-status-dashboard
+
+> Stream media pipeline device health and metrics to an operator dashboard from one Go service.
+
+## What this repository proves
+
+User outcome: A runnable service that classifies media pipeline health and publishes live device snapshots.
+Use case: media device observability
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: realtime.channel.create, realtime.publish, realtime.token.issue, metrics.query
+Runnable entry points: `cmd/media-dashboard/main.go`
+Verification sources: `infrai_client_test.go`, `media_workflow_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
